@@ -12,7 +12,7 @@
             <div class="card shadow" style="width: 25rem;">
                 <div class="card-body">
                     <h3 class="-r mb-4">Login</h3>
-                    <form method="POST" action="index.jsp">
+                    <form method="POST" action="login">
                         <div class="mb-3">
                             <label for="usuario" class="form-label" >Usuario</label>
                             <input type="text" class="form-control" id="usuario" name="usuario" required></input>
