@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             //Credenciales Incorrectas
             request.setAttribute("error","Usuario o Contraseña Incorrectos");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
 
 
