@@ -12,6 +12,11 @@
             <div class="card shadow" style="width: 25rem;">
                 <div class="card-body">
                     <h3 class="-r mb-4">Login</h3>
+                    <% if (request.getAttribute("error")!=null) {%>
+                        <div class="alert alert-danger" role="alert">
+                            <strong><%= request.getAttribute("error") %></strong>
+                        </div>
+                    <% } %>
                     <form method="POST" action="login">
                         <div class="mb-3">
                             <label for="usuario" class="form-label" >Usuario</label>
