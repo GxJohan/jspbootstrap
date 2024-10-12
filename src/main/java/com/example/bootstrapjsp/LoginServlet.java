@@ -11,5 +11,23 @@ public class LoginServlet extends HttpServlet {
     private static final String USER="admin";
     private static final String PASS="admin";
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String usuario = request.getParameter("usuario");
+        String contrasena = request.getParameter("contrasena");
+
+        if(USER.equals(usuario) && PASS.equals(contrasena)){
+            //Credenciales correctas
+            HttpSession session = request.getSession();
+            session.setAttribute("usuario", usuario);
+            response.sendRedirect("todo.jsp");
+        } else {
+            //Credenciales Incorrectas
+            request.setAttribute("error","Usuario o Contraseña Incorrectos");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        }
+
+
+
+    }
 
 }
